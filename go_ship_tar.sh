@@ -28,7 +28,7 @@ VERSION=$2
 go version
 #when something goes wrong with go version, just exit immediately
 if [ $? -ne 0 ]; then
-    echo 'you need install go, please visit https://golang.org'
+    echo 'you need to install go, please visit https://golang.org'
     exit 1
 fi
 
