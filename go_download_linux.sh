@@ -23,6 +23,8 @@
 # SOFTWARE.
 
 # Golang installation script for linux
+# Usage:
+# curl -O https://raw.githubusercontent.com/wuriyanto48/build-tools/master/go_download_linux.sh | sh
 
 check_err()
 {
