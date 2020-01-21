@@ -29,4 +29,4 @@ check_err $? "create maven app returned an error....!"
 
 
 # TODO
-# curl -O https://raw.githubusercontent.com/wuriyanto48/build-tools/master/mvn_create.sh | sh
+# curl https://raw.githubusercontent.com/wuriyanto48/build-tools/master/mvn_create.sh | sh -s com.wuriyanto.cahelek Cahelek
