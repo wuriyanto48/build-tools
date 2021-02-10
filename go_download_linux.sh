@@ -37,7 +37,7 @@ check_err()
 echo download go..
 
 # change version you want
-curl -O https://dl.google.com/go/go1.13.6.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz
 
 echo verify archive..
 sha256sum go1.13.6.linux-amd64.tar.gz
