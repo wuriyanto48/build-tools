@@ -66,3 +66,13 @@ check_err $? "rm archive returned an error....!"
 # export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 # and then load the commands into the current shell instance
 # source ~/.profile
+
+# change go version
+
+# remove current go version installed on your machine
+# $ which go
+# $ /usr/local/go/bin/go
+# $ cd /usr/local/
+# $ sudo rm -rf go/
+
+# and re run this script
