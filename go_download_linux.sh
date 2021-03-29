@@ -44,7 +44,7 @@ sha256sum go1.16.2.linux-amd64.tar.gz
 check_err $? "sha256sum returned an error....!"
 
 echo extract archive..
-tar -xvf go1.16.2.linux-amd64.tar.gz
+tar -zxvf go1.16.2.linux-amd64.tar.gz
 check_err $? "tar returned an error....!"
 
 sudo chown -R root:root ./go
