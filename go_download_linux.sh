@@ -37,14 +37,14 @@ check_err()
 echo download go..
 
 # change version you want
-curl -O https://dl.google.com/go/go1.16.2.linux-amd64.tar.gz
+curl -O https://dl.google.com/go/go1.16.linux-amd64.tar.gz
 
 echo verify archive..
-sha256sum go1.16.2.linux-amd64.tar.gz
+sha256sum go1.16.linux-amd64.tar.gz
 check_err $? "sha256sum returned an error....!"
 
 echo extract archive..
-tar -xvf go1.16.2.linux-amd64.tar.gz
+tar -xvf go1.16.linux-amd64.tar.gz
 check_err $? "tar returned an error....!"
 
 sudo chown -R root:root ./go
@@ -55,7 +55,7 @@ check_err $? "mv returned an error....!"
 
 echo remove archive..
 sleep 1
-rm go1.16.2.linux-amd64.tar.gz
+rm go1.16.linux-amd64.tar.gz
 check_err $? "rm archive returned an error....!"
 
 # after above process,
