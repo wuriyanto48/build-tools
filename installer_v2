@@ -1,0 +1,42 @@
+#!/bin/bash
+
+is_python_installed()
+{
+    if which python3 > /dev/null 2>&1;
+    then
+        return 0
+    fi
+    return 1
+}
+
+check_err()
+{
+    if [ "$1" -ne "0" ]; then
+        echo "Error # ${1} : ${2}"
+        exit ${1}
+    fi
+}
+
+echo "check python3........"
+is_python_installed
+check_err $? "python3 is not installed.."
+echo "python3 found"
+
+echo "getting version........"
+VERSION=$(curl --silent "https://api.github.com/repos/wuriyanto48/yowes/releases/latest" | python3 -c 'import json, sys; print(json.loads(sys.stdin.read())["tag_name"]);')
+echo "found version ${VERSION}"
+
+OSNAME="linux"
+if [[ $(uname) == 'Darwin' ]]; then
+  OSNAME="darwin"
+fi
+
+(
+  cd /tmp
+  echo "downlading....."
+  wget https://github.com/wuriyanto48/yowes/releases/download/${VERSION}/yowes-${VERSION}.${OSNAME}-amd64.tar.gz
+  tar -xvzf yowes-${VERSION}.${OSNAME}-amd64.tar.gz yowes
+
+  sudo mv yowes /usr/local/bin/yowes
+  yowes -v
+)
