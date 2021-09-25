@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# curl -s https://raw.githubusercontent.com/wuriyanto48/build-tools/master/installer_v2 | bash
 is_python_installed()
 {
     if which python3 > /dev/null 2>&1;
