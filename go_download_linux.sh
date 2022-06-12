@@ -58,12 +58,18 @@ sleep 1
 rm go1.16.linux-amd64.tar.gz
 check_err $? "rm archive returned an error....!"
 
-# after above process,
+# after above process, add new env variables to .profile or .bash_profile
 # open .profile
 # vi ~/.profile
 # add this line
 # export GOPATH=$HOME/go
 # export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+# Macos add this line
+# export GOPATH=/Users/johndoe/Documents/go-work
+# export GOROOT=/usr/local/go
+# export PATH=$PATH:$GOROOT/bin
+
 # and then load the commands into the current shell instance
 # source ~/.profile
 
